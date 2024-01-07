@@ -26,23 +26,23 @@ export default async function MoviePage({ params }) {
           }}
           placeholder="blur"
           blurDataURL="/spinner.svg"
-          alt="Movie poster"
+          alt="Movie Poster Not Available"
         ></Image>
         <div className="p-2">
           <h2 className="text-lg mb-3 font-bold">
-            {movie.title || movie.name}
+            {movie.title || movie.name || "NA"}
           </h2>
           <p className="text-lg mb-3">
             <span className="font-semibold mr-1">Overview:</span>
-            {movie.overview}
+            {movie.overview || "NA"}
           </p>
           <p className="mb-3">
             <span className="font-semibold mr-1">Date Released:</span>
-            {movie.release_date || movie.first_air_date}
+            {movie.release_date || movie.first_air_date || "NA"}
           </p>
           <p className="mb-3">
             <span className="font-semibold mr-1">Rating:</span>
-            {movie.vote_count}
+            {movie.vote_count || "NA"}
           </p>
         </div>
       </div>
